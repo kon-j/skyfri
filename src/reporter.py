@@ -70,7 +70,6 @@ class Reporter:
         q = "select sum(duration_sec)/count(*) from fct_rides where strftime('%Y', datetime)='2022'"
         self.cursor.execute(q)
         average_duration = self.cursor.fetchall()[0][0]
-        print("AVG duration:", average_duration)
         average_duration = f"{int(average_duration//60)}m:{int(average_duration%60)}s"
         df = pd.DataFrame([{"average_duration": average_duration}])
         df.to_csv(f"{self.output_file_duration}.csv", index=False)

@@ -13,6 +13,7 @@ or
 ```bash
 python3 -m pip install pandas
 ```
+Depending on the machine, instead of python3, another python alias should be used. E.g. python or python3.8
 
 ## How to run
 You need to specify path to historical data in `src/configs.py`. By default it's `historical_data`.
@@ -20,7 +21,7 @@ This folder should be on the same level as `src`. It accepts raw data in format 
 `historical_data/2022/01.json`
 `historical_data/2023/10.json`
 
-in order to run, execute from root folder:
+in order to run, execute from project's root folder:
 ```bash
 python3 main.py
 ```
